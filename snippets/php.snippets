@@ -248,16 +248,19 @@ snippet def
 snippet def?
 	${1}defined('${2}')${3}
 snippet wh
-	while (${1:/* condition */}) {
+	while (${1:/* condition */})
+  {
 		${2}
 	}
 # do ... while
 snippet do
-	do {
+	do
+  {
 		${2}
 	} while (${1:/* condition */});
 snippet if
-	if (${1:/* condition */}) {
+	if (${1:/* condition */})
+  {
 		${2}
 	}
 snippet ifil
@@ -265,9 +268,12 @@ snippet ifil
 		${2}
 	<?php endif; ?>
 snippet ife
-	if (${1:/* condition */}) {
+	if (${1:/* condition */})
+  {
 		${2}
-	} else {
+	}
+  else
+  {
 		${3}
 	}
 	${4}
@@ -279,15 +285,18 @@ snippet ifeil
 	<?php endif; ?>
 	${4}
 snippet el
-	else {
+	else
+  {
 		${1}
 	}
 snippet eif
-	elseif (${1:/* condition */}) {
+	elseif (${1:/* condition */})
+  {
 		${2}
 	}
 snippet switch
-	switch ($${1:variable}) {
+	switch ($${1:variable})
+  {
 		case '${2:value}':
 			${3}
 			break;
@@ -301,11 +310,13 @@ snippet case
 		${2}
 		break;${3}
 snippet for
-	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
+	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++})
+  {
 		${4}
 	}
 snippet foreach
-	foreach ($${1:variable} as $${2:value}) {
+	foreach ($${1:variable} as $${2:value})
+  {
 		${3}
 	}
 snippet foreachil
@@ -313,7 +324,8 @@ snippet foreachil
 		${3:<!-- html... -->}
 	<?php endforeach; ?>
 snippet foreachk
-	foreach ($${1:variable} as $${2:key} => $${3:value}) {
+	foreach ($${1:variable} as $${2:key} => $${3:value})
+  {
 		${4}
 	}
 snippet foreachkil
@@ -324,13 +336,15 @@ snippet foreachkil
 snippet array
 	$${1:arrayName} = array('${2}' => ${3});${4}
 snippet try
-	try {
+	try
+  {
 		${2}
 	} catch (${1:Exception} $e) {
 	}
 # lambda with closure
 snippet lambda
-	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */}) {
+	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */})
+  {
 		${4}
 	};
 # pre_dump();
@@ -397,11 +411,13 @@ snippet rett
 snippet retf
 	return false;
 snippet am
-	$${1:foo} = array_map(function($${2:v}) {
+	$${1:foo} = array_map(function($${2:v})
+  {
 		${3}
 		return $$2;
 	}, $$1);
 snippet aw
-	array_walk($${1:foo}, function(&$${2:v}, $${3:k}) {
+	array_walk($${1:foo}, function(&$${2:v}, $${3:k})
+  {
 		$$2 = ${4};
 	});
